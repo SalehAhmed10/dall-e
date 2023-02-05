@@ -28,8 +28,8 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        // const response = await fetch('http://localhost:8080/api/v1/dalle', 
-        const response = await fetch('https://dall-e-server.up.railway.app/api/v1/dalle',
+        // const response = await fetch('http://localhost:8080/api/v1/dalle',
+        const response = await fetch('https://tbc6lj.deta.dev/api/v1/dalle',
           {
             method: 'POST',
             headers: {
@@ -59,8 +59,8 @@ const CreatePost = () => {
       setLoading(true);
       try {
         // for local testing
-        // const response = await fetch('http://localhost:8080/api/v1/post', 
-        const response = await fetch('https://dall-e-server.up.railway.app/api/v1/post',
+        // const response = await fetch('http://localhost:8080/api/v1/post',
+        const response = await fetch('https://tbc6lj.deta.dev/api/v1/post',
           {
             method: 'POST',
             headers: {
