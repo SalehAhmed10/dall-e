@@ -29,11 +29,15 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         // const response = await fetch('http://localhost:8080/api/v1/dalle',
-        const response = await fetch('https://tbc6lj.deta.dev/api/v1/dalle',
+        const response = await fetch('https://demo-express.vercel.app/api/v1/dalle',
+          // note: the above url is the url of the deployed API
+          // no access control allow origin header is set on the deployed API
           {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+
             },
             body: JSON.stringify({
               prompt: form.prompt,
@@ -60,7 +64,7 @@ const CreatePost = () => {
       try {
         // for local testing
         // const response = await fetch('http://localhost:8080/api/v1/post',
-        const response = await fetch('https://tbc6lj.deta.dev/api/v1/post',
+        const response = await fetch('https://demo-express.vercel.app/api/v1/post',
           {
             method: 'POST',
             headers: {

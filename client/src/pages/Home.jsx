@@ -28,7 +28,7 @@ const Home = () => {
         try {
             // for local testing
             // const response = await fetch('http://localhost:8080/api/v1/post',
-            const response = await fetch('https://api-dalle-ai.deta.dev/api/v1/post',
+            const response = await fetch('https://demo-express.vercel.app/api/v1/post',
                 {
                     method: 'GET',
                     headers: {
