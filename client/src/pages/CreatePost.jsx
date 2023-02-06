@@ -29,7 +29,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         // const response = await fetch('http://localhost:8080/api/v1/dalle',
-        const response = await fetch('https://demo-express.vercel.app/api/v1/dalle',
+        const response = await fetch('https://api-dall-e-app.vercel.app/api/v1/dalle',
           // note: the above url is the url of the deployed API
           // no access control allow origin header is set on the deployed API
           {
@@ -64,7 +64,7 @@ const CreatePost = () => {
       try {
         // for local testing
         // const response = await fetch('http://localhost:8080/api/v1/post',
-        const response = await fetch('https://demo-express.vercel.app/api/v1/post',
+        const response = await fetch('https://api-dall-e-app.vercel.app/api/v1/post',
           {
             method: 'POST',
             headers: {
